@@ -28,7 +28,7 @@
         <ContentControl  Grid.Column="1" Grid.RowSpan="8" Content="{Binding}" Grid.Row="1" Height="NaN" Width="NaN"/>
         <Label x:Name="lblWindowName" Grid.Column="1" Content="Windows Name" HorizontalAlignment="Center" Margin="212,10,0,0" VerticalAlignment="Top" FontSize="24" />
         <StackPanel Grid.Row="1" Margin="0,2,0,0">
-            <Button Grid.Row="1" Name="btnEmployee" Height="60" Width="250" HorizontalAlignment="Left">
+            <Button Grid.Row="1" Name="btnEmployee" Height="60" Width="250" HorizontalAlignment="Left" Click="btnEmployee_Click">
                 <Grid Width="230">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto"/>
@@ -40,7 +40,7 @@
             </Button>
         </StackPanel>
         <StackPanel Grid.Row="2" Margin="0,2,0,0">
-            <Button Grid.Row="2" Name="btnTask" Height="60" Width="250" HorizontalAlignment="Left">
+            <Button Grid.Row="2" Name="btnTask" Height="60" Width="250" HorizontalAlignment="Left" Click="btnTask_Click">
                 <Grid Width="230">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto"/>
@@ -52,7 +52,7 @@
             </Button>
         </StackPanel>
         <StackPanel Grid.Row="3" Margin="0,2,0,0">
-            <Button Grid.Row="3" Name="btnSalary" Height="60" Width="250" HorizontalAlignment="Left">
+            <Button Grid.Row="3" Name="btnSalary" Height="60" Width="250" HorizontalAlignment="Left" Click="btnSalary_Click">
                 <Grid Width="230">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto"/>
@@ -135,5 +135,21 @@
 
             </views:PositionList>
         </DataTemplate>
+        <DataTemplate x:Name="Employeetemplate" DataType="{x:Type viewmodels:EmployeeViewModel}">
+            <views:EmployeeListView>
+                
+            </views:EmployeeListView>
+        </DataTemplate>
+        <DataTemplate x:Name="TaskTemplate" DataType="{x:Type viewmodels:TaskViewModel}">
+            <views:TaskList>
+
+            </views:TaskList>
+        </DataTemplate>
+        <DataTemplate x:Name="salarytemplate" DataType="{x:Type viewmodels:SalaryViewModel}">
+            <views:SalaryList>
+
+            </views:SalaryList>
+        </DataTemplate>
+
     </Window.Resources>
 </Window>
